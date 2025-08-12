@@ -20,6 +20,13 @@ import {
 import Image from 'next/image'
 import { FaMicrophone, FaMusic, FaHeadphones, FaStar } from 'react-icons/fa'
 import { useState } from 'react'
+import { getContent } from '../lib/content'
+
+const iconMap = {
+  FaMicrophone,
+  FaMusic,
+  FaHeadphones,
+}
 
 export default function Home() {
   const toast = useToast()
@@ -31,6 +38,9 @@ export default function Home() {
     message: ''
   })
   const [errors, setErrors] = useState<{[key: string]: string}>({})
+
+  // Load content from JSON
+  const content = getContent()
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }))
@@ -127,12 +137,19 @@ export default function Home() {
               height={600}
               priority
             />
+            <Heading
+              as="h1"
+              size="2xl"
+              color="text.primary"
+            >
+              {content.hero.title}
+            </Heading>
             <Text
               fontSize="xl"
               color="text.primary"
               maxW="2xl"
             >
-              Professional audio recording, mixing, and mastering services
+              {content.hero.subtitle}
             </Text>
           </VStack>
         </Container>
@@ -143,13 +160,10 @@ export default function Home() {
         <Container maxW="container.xl">
           <VStack spacing={8}>
             <Heading as="h2" size="xl" textAlign="center" color="text.primary">
-              About Us
+              {content.about.title}
             </Heading>
             <Text fontSize="lg" color="text.primary" maxW="3xl" textAlign="center" lineHeight="tall">
-              Fire Wave is a premier audio production studio specializing in bringing your musical vision to life. 
-              With years of experience in the industry, we provide top-quality recording, mixing, and mastering 
-              services for artists, bands, and producers. Our state-of-the-art equipment and passionate team 
-              ensure that every project receives the attention it deserves.
+              {content.about.description}
             </Text>
           </VStack>
         </Container>
@@ -163,38 +177,20 @@ export default function Home() {
               Our Services
             </Heading>
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} w="full">
-              <VStack spacing={4} p={8} bg="dark.900" rounded="lg" shadow="lg" border="1px solid" borderColor="border.medium">
-                <Icon as={FaMicrophone} w={12} h={12} color="brand.400" />
-                <Heading as="h3" size="md" color="text.primary">
-                  Audio Recording
-                </Heading>
-                <Text textAlign="center" color="text.primary">
-                  Professional recording sessions in our acoustically treated studio. 
-                  We capture the perfect take with premium microphones and equipment.
-                </Text>
-              </VStack>
-              
-              <VStack spacing={4} p={8} bg="dark.900" rounded="lg" shadow="lg" border="1px solid" borderColor="border.medium">
-                <Icon as={FaMusic} w={12} h={12} color="brand.400" />
-                <Heading as="h3" size="md" color="text.primary">
-                  Mixing
-                </Heading>
-                <Text textAlign="center" color="text.primary">
-                  Expert mixing services to balance and enhance your tracks. 
-                  We bring clarity and depth to your music with precision and creativity.
-                </Text>
-              </VStack>
-              
-              <VStack spacing={4} p={8} bg="dark.900" rounded="lg" shadow="lg" border="1px solid" borderColor="border.medium">
-                <Icon as={FaHeadphones} w={12} h={12} color="brand.400" />
-                <Heading as="h3" size="md" color="text.primary">
-                  Mastering
-                </Heading>
-                <Text textAlign="center" color="text.primary">
-                  Final polish and optimization for release. 
-                  We ensure your music sounds great on all platforms and devices.
-                </Text>
-              </VStack>
+              {content.services.map((service) => {
+                const IconComponent = iconMap[service.icon as keyof typeof iconMap]
+                return (
+                  <VStack key={service.id} spacing={4} p={8} bg="dark.900" rounded="lg" shadow="lg" border="1px solid" borderColor="border.medium">
+                    <Icon as={IconComponent} w={12} h={12} color="brand.400" />
+                    <Heading as="h3" size="md" color="text.primary">
+                      {service.title}
+                    </Heading>
+                    <Text textAlign="center" color="text.primary">
+                      {service.description}
+                    </Text>
+                  </VStack>
+                )
+              })}
             </SimpleGrid>
           </VStack>
         </Container>
@@ -211,41 +207,16 @@ export default function Home() {
               We&apos;ve had the privilege of working with amazing artists and bands across various genres
             </Text>
             <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8} w="full">
-              <VStack spacing={4} p={6} bg="dark.900" rounded="lg" border="1px solid" borderColor="border.medium">
-                <Box w="full" h="120px" bg="dark.800" rounded="md" display="flex" alignItems="center" justifyContent="center">
-                  <Text color="text.secondary" fontSize="lg" fontWeight="bold">The Midnight Echoes</Text>
-                </Box>
-                <Text fontSize="sm" color="text.secondary" textAlign="center">
-                  Alternative Rock
-                </Text>
-              </VStack>
-              
-              <VStack spacing={4} p={6} bg="dark.900" rounded="lg" border="1px solid" borderColor="border.medium">
-                <Box w="full" h="120px" bg="dark.800" rounded="md" display="flex" alignItems="center" justifyContent="center">
-                  <Text color="text.secondary" fontSize="lg" fontWeight="bold">Sarah Chen</Text>
-                </Box>
-                <Text fontSize="sm" color="text.secondary" textAlign="center">
-                  Singer-Songwriter
-                </Text>
-              </VStack>
-              
-              <VStack spacing={4} p={6} bg="dark.900" rounded="lg" border="1px solid" borderColor="border.medium">
-                <Box w="full" h="120px" bg="dark.800" rounded="md" display="flex" alignItems="center" justifyContent="center">
-                  <Text color="text.secondary" fontSize="lg" fontWeight="bold">Urban Beats</Text>
-                </Box>
-                <Text fontSize="sm" color="text.secondary" textAlign="center">
-                  Hip-Hop/R&B
-                </Text>
-              </VStack>
-              
-              <VStack spacing={4} p={6} bg="dark.900" rounded="lg" border="1px solid" borderColor="border.medium">
-                <Box w="full" h="120px" bg="dark.800" rounded="md" display="flex" alignItems="center" justifyContent="center">
-                  <Text color="text.secondary" fontSize="lg" fontWeight="bold">Crystal Clear</Text>
-                </Box>
-                <Text fontSize="sm" color="text.secondary" textAlign="center">
-                  Pop/Electronic
-                </Text>
-              </VStack>
+              {content.clients.map((client) => (
+                <VStack key={client.id} spacing={4} p={6} bg="dark.900" rounded="lg" border="1px solid" borderColor="border.medium">
+                  <Box w="full" h="120px" bg="dark.800" rounded="md" display="flex" alignItems="center" justifyContent="center">
+                    <Text color="text.secondary" fontSize="lg" fontWeight="bold">{client.name}</Text>
+                  </Box>
+                  <Text fontSize="sm" color="text.secondary" textAlign="center">
+                    {client.genre}
+                  </Text>
+                </VStack>
+              ))}
             </SimpleGrid>
           </VStack>
         </Container>
@@ -259,35 +230,21 @@ export default function Home() {
               What Our Clients Say
             </Heading>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="full">
-              <VStack spacing={4} p={6} bg="dark.900" rounded="lg" align="start" border="1px solid" borderColor="border.medium">
-                <HStack>
-                  {[...Array(5)].map((_, i) => (
-                    <Icon key={i} as={FaStar} color="warning.400" />
-                  ))}
-                </HStack>
-                <Text fontSize="lg" fontStyle="italic" color="text.primary">
-                  &ldquo;Fire Wave transformed our sound completely. The mixing and mastering 
-                  brought out the best in our music. Highly recommended!&rdquo;
-                </Text>
-                <Text fontWeight="bold" color="text.primary">
-                  - The Midnight Echoes
-                </Text>
-              </VStack>
-              
-              <VStack spacing={4} p={6} bg="dark.900" rounded="lg" align="start" border="1px solid" borderColor="border.medium">
-                <HStack>
-                  {[...Array(5)].map((_, i) => (
-                    <Icon key={i} as={FaStar} color="warning.400" />
-                  ))}
-                </HStack>
-                <Text fontSize="lg" fontStyle="italic" color="text.primary">
-                  &ldquo;Professional, creative, and incredibly talented. They understood 
-                  our vision and delivered beyond our expectations.&rdquo;
-                </Text>
-                <Text fontWeight="bold" color="text.primary">
-                  - Sarah Chen, Solo Artist
-                </Text>
-              </VStack>
+              {content.testimonials.map((testimonial) => (
+                <VStack key={testimonial.id} spacing={4} p={6} bg="dark.900" rounded="lg" align="start" border="1px solid" borderColor="border.medium">
+                  <HStack>
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Icon key={i} as={FaStar} color="warning.400" />
+                    ))}
+                  </HStack>
+                  <Text fontSize="lg" fontStyle="italic" color="text.primary">
+                    &ldquo;{testimonial.text}&rdquo;
+                  </Text>
+                  <Text fontWeight="bold" color="text.primary">
+                    - {testimonial.clientName}
+                  </Text>
+                </VStack>
+              ))}
             </SimpleGrid>
           </VStack>
         </Container>
@@ -298,7 +255,7 @@ export default function Home() {
         <Container maxW="container.md">
           <VStack spacing={8}>
             <Heading as="h2" size="xl" textAlign="center" color="text.primary">
-              Get In Touch
+              {content.contact.title}
             </Heading>
             <Box as="form" onSubmit={handleContactSubmit} w="full" maxW="lg">
               <VStack spacing={6}>

@@ -1,0 +1,90 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "The Midnight Echoes",
+      "genre": "Alternative Rock",
+      "image": "/clients/midnight-echoes.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Chen",
+      "genre": "Singer-Songwriter",
+      "image": "/clients/sarah-chen.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Urban Beats",
+      "genre": "Hip-Hop/R&B",
+      "image": "/clients/urban-beats.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Crystal Clear",
+      "genre": "Pop/Electronic",
+      "image": "/clients/crystal-clear.jpg"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "clientName": "The Midnight Echoes",
+      "rating": 5,
+      "text": "Fire Wave transformed our sound completely. The mixing and mastering brought out the best in our music. Highly recommended!",
+      "genre": "Alternative Rock"
+    },
+    {
+      "id": 2,
+      "clientName": "Sarah Chen",
+      "rating": 5,
+      "text": "Professional, creative, and incredibly talented. They understood our vision and delivered beyond our expectations.",
+      "genre": "Singer-Songwriter"
+    },
+    {
+      "id": 3,
+      "clientName": "Urban Beats",
+      "rating": 5,
+      "text": "The team at Fire Wave really knows their stuff. They took our raw tracks and turned them into something amazing. The attention to detail is incredible.",
+      "genre": "Hip-Hop/R&B"
+    },
+    {
+      "id": 4,
+      "clientName": "Crystal Clear",
+      "rating": 5,
+      "text": "Working with Fire Wave was a game-changer for our EP. The mastering quality is outstanding and the communication throughout the process was excellent.",
+      "genre": "Pop/Electronic"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "title": "Audio Recording",
+      "description": "Professional recording sessions in our acoustically treated studio. We capture the perfect take with premium microphones and equipment.",
+      "icon": "FaMicrophone"
+    },
+    {
+      "id": 2,
+      "title": "Mixing",
+      "description": "Expert mixing services to balance and enhance your tracks. We bring clarity and depth to your music with precision and creativity.",
+      "icon": "FaMusic"
+    },
+    {
+      "id": 3,
+      "title": "Mastering",
+      "description": "Final polish and optimization for release. We ensure your music sounds great on all platforms and devices.",
+      "icon": "FaHeadphones"
+    }
+  ],
+  "about": {
+    "title": "About Us",
+    "description": "Fire Wave is a premier audio production studio specializing in bringing your musical vision to life. With years of experience in the industry, we provide top-quality recording, mixing, and mastering services for artists, bands, and producers. Our state-of-the-art equipment and passionate team ensure that every project receives the attention it deserves."
+  },
+  "hero": {
+    "title": "Fire Wave",
+    "subtitle": "Professional audio recording, mixing, and mastering services"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Ready to start your next project? Get in touch with us today."
+  }
+} 
