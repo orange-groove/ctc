@@ -24,13 +24,6 @@ export default function Hero() {
             height={600}
             priority
           />
-          <Heading
-            as="h1"
-            size="2xl"
-            color="text.primary"
-          >
-            {content.hero.title}
-          </Heading>
           <Text
             fontSize="xl"
             color="text.primary"
