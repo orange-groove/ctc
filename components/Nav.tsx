@@ -33,7 +33,6 @@ const NavLink = ({ children, href }: { children: React.ReactNode; href: string }
       rounded={'md'}
       _hover={{
         textDecoration: 'none',
-        bg: 'dark.900',
       }}
       cursor="pointer"
       color="text.primary"
@@ -48,7 +47,7 @@ export default function Nav() {
   const isMobile = useBreakpointValue({ base: true, md: false })
 
   return (
-    <Box bg="dark.950" px={4} boxShadow={'lg'} position="sticky" top={0} zIndex={1000} borderBottom="1px solid" borderColor="border.medium">
+    <Box bg="background.primary" px={4} boxShadow={'lg'} position="sticky" top={0} zIndex={1000} borderBottom="1px solid" borderColor="border.medium">
       <Container maxW="container.xl">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <HStack spacing={8} alignItems={'center'}>            
@@ -90,7 +89,6 @@ export default function Nav() {
                 onClick={isOpen ? onClose : onOpen}
                 color="text.primary"
                 bg="transparent"
-                _hover={{ bg: 'dark.900' }}
               />
             )}
           </Flex>

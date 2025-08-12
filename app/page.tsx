@@ -125,9 +125,9 @@ export default function Home() {
   }
 
   return (
-    <Box bg="dark.950">
+    <Box bg="background.primary">
       {/* Hero Section with Logo */}
-      <Box bg="dark.950" py={20}>
+      <Box bg="background.primary" py={20}>
         <Container maxW="container.xl">
           <VStack spacing={8} textAlign="center">
             <Image
@@ -156,7 +156,7 @@ export default function Home() {
       </Box>
 
       {/* About Section */}
-      <Box py={16} id="about" bg="dark.950">
+      <Box py={16} id="about" bg="background.primary">
         <Container maxW="container.xl">
           <VStack spacing={8}>
             <Heading as="h2" size="xl" textAlign="center" color="text.primary">
@@ -170,7 +170,7 @@ export default function Home() {
       </Box>
 
       {/* Services Section */}
-      <Box bg="dark.950" py={16} id="services">
+      <Box bg="background.primary" py={16} id="services">
         <Container maxW="container.xl">
           <VStack spacing={12}>
             <Heading as="h2" size="xl" textAlign="center" color="text.primary">
@@ -180,7 +180,7 @@ export default function Home() {
               {content.services.map((service) => {
                 const IconComponent = iconMap[service.icon as keyof typeof iconMap]
                 return (
-                  <VStack key={service.id} spacing={4} p={8} bg="dark.900" rounded="lg" shadow="lg" border="1px solid" borderColor="border.medium">
+                  <VStack key={service.id} spacing={4} p={8} bg="background.primary" rounded="lg" shadow="lg" border="1px solid" borderColor="border.medium">
                     <Icon as={IconComponent} w={12} h={12} color="brand.400" />
                     <Heading as="h3" size="md" color="text.primary">
                       {service.title}
@@ -197,7 +197,7 @@ export default function Home() {
       </Box>
 
       {/* Clients Section */}
-      <Box py={16} id="clients" bg="dark.950">
+      <Box py={16} id="clients" bg="background.primary">
         <Container maxW="container.xl">
           <VStack spacing={12}>
             <Heading as="h2" size="xl" textAlign="center" color="text.primary">
@@ -208,8 +208,8 @@ export default function Home() {
             </Text>
             <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8} w="full">
               {content.clients.map((client) => (
-                <VStack key={client.id} spacing={4} p={6} bg="dark.900" rounded="lg" border="1px solid" borderColor="border.medium">
-                  <Box w="full" h="120px" bg="dark.800" rounded="md" display="flex" alignItems="center" justifyContent="center">
+                <VStack key={client.id} spacing={4} p={6} bg="background.primary" rounded="lg" border="1px solid" borderColor="border.medium">
+                  <Box w="full" h="120px" bg="background.primary" rounded="md" display="flex" alignItems="center" justifyContent="center">
                     <Text color="text.secondary" fontSize="lg" fontWeight="bold">{client.name}</Text>
                   </Box>
                   <Text fontSize="sm" color="text.secondary" textAlign="center">
@@ -223,7 +223,7 @@ export default function Home() {
       </Box>
 
       {/* Testimonials Section */}
-      <Box py={16} id="testimonials" bg="dark.950">
+      <Box py={16} id="testimonials" bg="background.primary">
         <Container maxW="container.xl">
           <VStack spacing={12}>
             <Heading as="h2" size="xl" textAlign="center" color="text.primary">
@@ -231,7 +231,7 @@ export default function Home() {
             </Heading>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="full">
               {content.testimonials.map((testimonial) => (
-                <VStack key={testimonial.id} spacing={4} p={6} bg="dark.900" rounded="lg" align="start" border="1px solid" borderColor="border.medium">
+                <VStack key={testimonial.id} spacing={4} p={6} bg="background.primary" rounded="lg" align="start" border="1px solid" borderColor="border.medium">
                   <HStack>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Icon key={i} as={FaStar} color="warning.400" />
@@ -251,7 +251,7 @@ export default function Home() {
       </Box>
 
       {/* Contact Section */}
-      <Box bg="dark.950" py={16} id="contact">
+      <Box bg="background.primary" py={16} id="contact">
         <Container maxW="container.md">
           <VStack spacing={8}>
             <Heading as="h2" size="xl" textAlign="center" color="text.primary">

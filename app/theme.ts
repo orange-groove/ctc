@@ -14,20 +14,10 @@ const colors = {
     800: '#3549ff',
     900: '#2f3fff',
   },
-  
-  // Dark theme colors
-  dark: {
-    50: '#f8f9fa',
-    100: '#e9ecef',
-    200: '#dee2e6',
-    300: '#ced4da',
-    400: '#adb5bd',
-    500: '#6c757d',
-    600: '#495057',
-    700: '#343a40',
-    800: '#212529',
-    900: '#0a0a1a', // Card background
-    950: '#050512', // Main background
+
+  background: {
+    primary: '#000000',
+    secondary: '#050512',
   },
   
   // Text colors
@@ -87,23 +77,22 @@ const colors = {
   
   // Form colors
   form: {
-    bg: '#0a0a1a',
-    border: '#4b5563',
-    placeholder: '#8a8a8a',
+    bg: 'background.primary',
+    border: 'border.medium',
+    placeholder: 'text.muted',
   }
 }
 
 const theme = extendTheme({
   colors,
   config: {
-    initialColorMode: 'dark',
     useSystemColorMode: false,
   },
   styles: {
     global: {
       body: {
-        bg: colors.dark[950],
-        color: colors.text.primary,
+        bg: 'background.primary',
+        color: 'text.primary',
       },
     },
   },
@@ -114,31 +103,31 @@ const theme = extendTheme({
       },
       variants: {
         solid: {
-          bg: colors.brand[500],
+          bg: 'brand.500',
           color: 'white',
           _hover: {
-            bg: colors.brand[600],
+            bg: 'brand.600',
           },
         },
       },
     },
     Input: {
       defaultProps: {
-        bg: colors.form.bg,
-        borderColor: colors.form.border,
-        color: colors.text.primary,
+        bg: 'background.primary',
+        borderColor: 'border.medium',
+        color: 'text.primary',
         _placeholder: {
-          color: colors.form.placeholder,
+          color: 'text.muted',
         },
       },
     },
     Textarea: {
       defaultProps: {
-        bg: colors.form.bg,
-        borderColor: colors.form.border,
-        color: colors.text.primary,
+        bg: 'background.primary',
+        borderColor: 'border.medium',
+        color: 'text.primary',
         _placeholder: {
-          color: colors.form.placeholder,
+          color: 'text.muted',
         },
       },
     },
