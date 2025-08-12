@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'Fire Wave <noreply@fire-wave.com>',
+      from: 'Fire Wave <noreply@firewave912.com>',
       to: [process.env.CONTACT_EMAIL || 'your-email@example.com'],
       subject: `New Contact Form Submission from ${name}`,
       html: `
