@@ -15,10 +15,9 @@ import {
   FormControl,
   FormLabel,
   useToast,
-  Image as ChakraImage,
 } from '@chakra-ui/react'
 import Image from 'next/image'
-import { FaMicrophone, FaMusic, FaHeadphones, FaStar, FaPlay } from 'react-icons/fa'
+import { FaMicrophone, FaMusic, FaHeadphones, FaStar } from 'react-icons/fa'
 
 export default function Home() {
   const toast = useToast()
@@ -128,7 +127,7 @@ export default function Home() {
               Featured Clients
             </Heading>
             <Text fontSize="lg" color="text.secondary" maxW="3xl" textAlign="center">
-              We've had the privilege of working with amazing artists and bands across various genres
+              We&apos;ve had the privilege of working with amazing artists and bands across various genres
             </Text>
             <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8} w="full">
               <VStack spacing={4} p={6} bg="dark.900" rounded="lg" border="1px solid" borderColor="border.medium">
@@ -186,8 +185,8 @@ export default function Home() {
                   ))}
                 </HStack>
                 <Text fontSize="lg" fontStyle="italic" color="text.primary">
-                  "Fire Wave transformed our sound completely. The mixing and mastering 
-                  brought out the best in our music. Highly recommended!"
+                  &ldquo;Fire Wave transformed our sound completely. The mixing and mastering 
+                  brought out the best in our music. Highly recommended!&rdquo;
                 </Text>
                 <Text fontWeight="bold" color="text.primary">
                   - The Midnight Echoes
@@ -201,8 +200,8 @@ export default function Home() {
                   ))}
                 </HStack>
                 <Text fontSize="lg" fontStyle="italic" color="text.primary">
-                  "Professional, creative, and incredibly talented. They understood 
-                  our vision and delivered beyond our expectations."
+                  &ldquo;Professional, creative, and incredibly talented. They understood 
+                  our vision and delivered beyond our expectations.&rdquo;
                 </Text>
                 <Text fontWeight="bold" color="text.primary">
                   - Sarah Chen, Solo Artist

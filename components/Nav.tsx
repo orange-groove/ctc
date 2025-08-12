@@ -13,7 +13,6 @@ import {
   Container,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-import Image from 'next/image'
 
 const NavLink = ({ children, href }: { children: React.ReactNode; href: string }) => {
   const handleClick = (e: React.MouseEvent) => {
