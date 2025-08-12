@@ -63,23 +63,7 @@ export default function Nav() {
           </HStack>
 
           <Flex alignItems={'center'}>
-            {!isMobile && (
-              <Button
-                bg="brand.500"
-                color="white"
-                _hover={{
-                  bg: 'brand.600',
-                }}
-                onClick={() => {
-                  const element = document.querySelector('#contact')
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' })
-                  }
-                }}
-              >
-                Get Started
-              </Button>
-            )}
+            
             {isMobile && (
               <IconButton
                 size={'md'}
