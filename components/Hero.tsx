@@ -3,7 +3,6 @@
 import {
   Box,
   Container,
-  Heading,
   Text,
   VStack,
 } from '@chakra-ui/react'
