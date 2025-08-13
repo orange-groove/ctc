@@ -22,6 +22,12 @@ export interface Service {
   icon: string
 }
 
+export interface GearCategory {
+  id: number
+  category: string
+  items: string[]
+}
+
 export interface About {
   title: string
   description: string
@@ -41,6 +47,7 @@ export interface ContentData {
   clients: Client[]
   testimonials: Testimonial[]
   services: Service[]
+  gear: GearCategory[]
   about: About
   hero: Hero
   contact: Contact
@@ -60,6 +67,10 @@ export function getTestimonials(): Testimonial[] {
 
 export function getServices(): Service[] {
   return contentData.services
+}
+
+export function getGear(): GearCategory[] {
+  return contentData.gear
 }
 
 export function getAbout(): About {
