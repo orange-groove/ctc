@@ -1,18 +1,18 @@
 import { extendTheme } from '@chakra-ui/react'
 
 const colors = {
-  // Primary brand colors
+  // Primary brand colors - Orange theme
   brand: {
-    50: '#f0f4ff',
-    100: '#e0e9ff',
-    200: '#c7d7ff',
-    300: '#a3bfff',
-    400: '#7a9eff',
-    500: '#5a7cff', // Primary blue
-    600: '#4a6bff',
-    700: '#3d5aff',
-    800: '#3549ff',
-    900: '#2f3fff',
+    50: '#fff7ed',
+    100: '#ffedd5',
+    200: '#fed7aa',
+    300: '#fdba74',
+    400: '#fb923c',
+    500: '#f97316', // Primary orange
+    600: '#ea580c',
+    700: '#c2410c',
+    800: '#9a3412',
+    900: '#7c2d12',
   },
 
   background: {
@@ -77,7 +77,7 @@ const colors = {
   
   // Form colors
   form: {
-    bg: 'background.primary',
+    bg: 'background.secondary',
     border: 'border.medium',
     placeholder: 'text.muted',
   }
