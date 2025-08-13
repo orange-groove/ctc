@@ -53,7 +53,7 @@ export default function Nav() {
   }
 
   return (
-    <Box bg="background.primary" px={4} boxShadow={'lg'} position="sticky" top={0} zIndex={1000} borderBottom="1px solid" borderColor="border.medium">
+    <Box bg="background.primary" px={4} boxShadow={'lg'} position="fixed" top={0} left={0} right={0} zIndex={1000} borderBottom="1px solid" borderColor="border.medium">
       <Container maxW="container.xl">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <HStack spacing={8} alignItems={'center'}>

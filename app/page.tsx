@@ -11,12 +11,12 @@ import Contact from '../components/Contact'
 
 export default function Home() {
   return (
-    <Box bg="background.primary">
+    <Box bg="background.primary" pt={16}>
       <Hero />
       <About />
       <Services />
-      {/* <Gear /> */}
-      {/* <Clients />
+      {/* <Gear />
+      <Clients />
       <Testimonials /> */}
       <Contact />
     </Box>
