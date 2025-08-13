@@ -66,7 +66,7 @@ export default function Nav() {
             
             {isMobile && (
               <IconButton
-                size={'md'}
+                size="lg"
                 icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
                 aria-label={'Open Menu'}
                 display={{ md: 'none' }}
@@ -83,8 +83,8 @@ export default function Nav() {
             <Stack as={'nav'} spacing={4}>
               <NavLink href="#about">About</NavLink>
               <NavLink href="#services">Services</NavLink>
-              <NavLink href="#clients">Clients</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
+              {/* <NavLink href="#clients">Clients</NavLink>
+              <NavLink href="#testimonials">Testimonials</NavLink> */}
               <NavLink href="#contact">Contact</NavLink>
             </Stack>
           </Box>
