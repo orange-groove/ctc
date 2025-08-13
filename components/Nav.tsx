@@ -76,7 +76,7 @@ export default function Nav() {
               <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
                 <NavLink href="#about">About</NavLink>
                 <NavLink href="#services">Services</NavLink>
-                <NavLink href="#gear">Gear</NavLink>
+                {/* <NavLink href="#gear">Gear</NavLink> */}
                 {/* <NavLink href="#clients">Clients</NavLink>
                 <NavLink href="#testimonials">Testimonials</NavLink> */}
                 <NavLink href="#contact">Contact</NavLink>
@@ -122,7 +122,7 @@ export default function Nav() {
             <Stack as={'nav'} spacing={4}>
               <NavLink href="#about">About</NavLink>
               <NavLink href="#services">Services</NavLink>
-              <NavLink href="#gear">Gear</NavLink>
+              {/* <NavLink href="#gear">Gear</NavLink> */}
               {/* <NavLink href="#clients">Clients</NavLink>
               <NavLink href="#testimonials">Testimonials</NavLink> */}
               <NavLink href="#contact">Contact</NavLink>
