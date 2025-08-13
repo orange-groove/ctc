@@ -79,7 +79,7 @@ const colors = {
   form: {
     bg: 'background.secondary',
     border: 'border.medium',
-    placeholder: 'text.muted',
+    placeholder: '#a0a0a0',
   }
 }
 
@@ -117,7 +117,7 @@ const theme = extendTheme({
         borderColor: 'border.medium',
         color: 'text.primary',
         _placeholder: {
-          color: 'text.muted',
+          color: '#a0a0a0',
         },
       },
     },
@@ -127,7 +127,7 @@ const theme = extendTheme({
         borderColor: 'border.medium',
         color: 'text.primary',
         _placeholder: {
-          color: 'text.muted',
+          color: '#a0a0a0',
         },
       },
     },
