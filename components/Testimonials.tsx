@@ -28,7 +28,7 @@ export default function Testimonials() {
               <VStack key={testimonial.id} spacing={4} p={6} bg="background.primary" rounded="lg" align="start" border="1px solid" borderColor="border.medium">
                 <HStack>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Icon key={i} as={FaStar} color="warning.400" />
+                    <Icon key={i} as={FaStar} color="brand.500" />
                   ))}
                 </HStack>
                 <Text fontSize="lg" fontStyle="italic" color="text.primary">

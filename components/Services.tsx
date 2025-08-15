@@ -33,7 +33,7 @@ export default function Services() {
               const IconComponent = iconMap[service.icon as keyof typeof iconMap]
               return (
                 <VStack key={service.id} spacing={4} p={8} bg="background.primary" rounded="lg" shadow="lg" border="1px solid" borderColor="border.medium">
-                  <Icon as={IconComponent} w={12} h={12} color="brand.400" />
+                  <Icon as={IconComponent} w={12} h={12} color="brand.500" />
                   <Heading as="h3" size="md" color="text.primary">
                     {service.title}
                   </Heading>

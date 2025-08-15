@@ -29,14 +29,14 @@ export default function Gear() {
           </Text>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="full">
             {content.gear.map((category) => (
-              <VStack key={category.id} spacing={4} p={6} bg="background.secondary" rounded="lg" align="start" border="1px solid" borderColor="border.medium">
+              <VStack key={category.id} spacing={4} p={6} bg="background.primary" rounded="lg" align="start" border="1px solid" borderColor="border.medium">
                 <Heading as="h3" size="md" color="text.primary">
                   {category.category}
                 </Heading>
                 <List spacing={2} w="full">
                   {category.items.map((item, index) => (
                     <ListItem key={index} color="text.primary" display="flex" alignItems="center">
-                      <ListIcon as={FaCheckCircle} color="brand.400" />
+                      <ListIcon as={FaCheckCircle} color="brand.500" />
                       {item}
                     </ListItem>
                   ))}
