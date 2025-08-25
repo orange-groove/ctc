@@ -150,7 +150,7 @@ export default function Hero() {
               transform={isLoaded ? 'scale(1.1)' : 'scale(1)'}
               overflow="visible"
             >
-              <Text fontSize="80px" color="text.primary">Fire Wave Studios</Text>
+              <Text fontSize={['40px', '60px', '80px']} color="text.primary">Fire Wave Studios</Text>
             </Box>
             <Text
               fontSize="xl"
