@@ -26,8 +26,11 @@ const studioImages = [
 export default function Hero() {
   const content = getContent()
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [nextImageIndex, setNextImageIndex] = useState(1)
   const [isLoaded, setIsLoaded] = useState(false)
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const [currentImageLoaded, setCurrentImageLoaded] = useState(false)
+  const [nextImageLoaded, setNextImageLoaded] = useState(false)
 
   useEffect(() => {
     // Trigger logo animation after component mounts
@@ -38,19 +41,30 @@ export default function Hero() {
     // Image transition timer
     const imageTimer = setInterval(() => {
       setIsTransitioning(true)
+      
+      // Wait for longer fade duration, then change image
       setTimeout(() => {
-        setCurrentImageIndex((prevIndex) => 
-          prevIndex === studioImages.length - 1 ? 0 : prevIndex + 1
-        )
+        setCurrentImageIndex(nextImageIndex)
+        setNextImageIndex((nextImageIndex + 1) % studioImages.length)
         setIsTransitioning(false)
-      }, 500) // Half second fade out, then change image
-    }, 5000) // Change image every 5 seconds
+        setCurrentImageLoaded(nextImageLoaded)
+        setNextImageLoaded(false)
+      }, 2000) // 2 second fade duration
+    }, 6000) // Change image every 6 seconds (increased from 5)
 
     return () => {
       clearTimeout(logoTimer)
       clearInterval(imageTimer)
     }
-  }, [])
+  }, [nextImageIndex, nextImageLoaded])
+
+  const handleCurrentImageLoad = () => {
+    setCurrentImageLoaded(true)
+  }
+
+  const handleNextImageLoad = () => {
+    setNextImageLoaded(true)
+  }
 
   return (
     <Box 
@@ -60,7 +74,7 @@ export default function Hero() {
       overflow="hidden"
       bg="background.primary"
     >
-      {/* Single Background Image */}
+      {/* Current Background Image */}
       <Box
         position="absolute"
         top={0}
@@ -68,7 +82,7 @@ export default function Hero() {
         w="100%"
         h="100%"
         opacity={isTransitioning ? 0 : 1}
-        transition="opacity 1s ease-in-out"
+        transition="opacity 2s ease-in-out"
         zIndex={1}
       >
         <Image
@@ -81,6 +95,31 @@ export default function Hero() {
           }}
           priority={currentImageIndex === 0}
           sizes="100vw"
+          onLoad={handleCurrentImageLoad}
+        />
+      </Box>
+
+      {/* Preloaded Next Background Image */}
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        w="100%"
+        h="100%"
+        opacity={0}
+        zIndex={0}
+        pointerEvents="none"
+      >
+        <Image
+          src={studioImages[nextImageIndex]}
+          alt={`Studio image ${nextImageIndex + 1}`}
+          fill
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+          sizes="100vw"
+          onLoad={handleNextImageLoad}
         />
       </Box>
 
