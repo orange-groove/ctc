@@ -11,7 +11,7 @@ import Contact from '../components/Contact'
 
 export default function Home() {
   return (
-    <Box bg="background.primary" pt={16}>
+    <Box bg="background.primary">
       <Hero />
       <About />
       <Services />
