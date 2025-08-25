@@ -17,7 +17,6 @@ const studioImages = [
   '/drums_2.png',
   '/guitars.png',
   '/mic.png',
-  '/pano.png',
   '/room_1.png',
   '/room_2.png',
   '/room_3.png',
