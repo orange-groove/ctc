@@ -45,19 +45,20 @@ export default function Hero() {
 
     // Image transition timer
     const imageTimer = setInterval(() => {
-      setIsTransitioning(true)
-      setImageLoaded(false)
-      
       // Preload next image before transition
       preloadNextImage()
       
-      // Wait for longer fade duration, then change image
+      // Start fade out
+      setIsTransitioning(true)
+      setImageLoaded(false)
+      
+      // After fade out completes, change image and fade in
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) => 
           prevIndex === studioImages.length - 1 ? 0 : prevIndex + 1
         )
         setIsTransitioning(false)
-      }, 2000) // 2 second fade duration
+      }, 2000) // Change image after 2-second fade out
     }, 6000) // Change image every 6 seconds
 
     return () => {
