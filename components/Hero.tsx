@@ -27,8 +27,7 @@ export default function Hero() {
   const content = getContent()
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
-  const [isTransitioning, setIsTransitioning] = useState(false)
-  const [imageLoaded, setImageLoaded] = useState(false)
+  const [imageZoom, setImageZoom] = useState(false)
 
   useEffect(() => {
     // Trigger logo animation after component mounts
@@ -36,39 +35,27 @@ export default function Hero() {
       setIsLoaded(true)
     }, 100)
 
-    // Preload next image
-    const preloadNextImage = () => {
-      const nextIndex = (currentImageIndex + 1) % studioImages.length
-      const img = new window.Image()
-      img.src = studioImages[nextIndex]
-    }
-
     // Image transition timer
     const imageTimer = setInterval(() => {
-      // Preload next image before transition
-      preloadNextImage()
+      // Reset zoom and loading states for new image
+      setImageZoom(false)
       
-      // Start fade out
-      setIsTransitioning(true)
-      setImageLoaded(false)
-      
-      // After fade out completes, change image and fade in
-      setTimeout(() => {
-        setCurrentImageIndex((prevIndex) => 
-          prevIndex === studioImages.length - 1 ? 0 : prevIndex + 1
-        )
-        setIsTransitioning(false)
-      }, 2000) // Change image after 2-second fade out
-    }, 6000) // Change image every 6 seconds
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === studioImages.length - 1 ? 0 : prevIndex + 1
+      )
+    }, 5000) // Change image every 5 seconds
 
     return () => {
       clearTimeout(logoTimer)
       clearInterval(imageTimer)
     }
-  }, [currentImageIndex])
+  }, [])
 
   const handleImageLoad = () => {
-    setImageLoaded(true)
+    // Start zoom effect after image loads
+    setTimeout(() => {
+      setImageZoom(true)
+    }, 100)
   }
 
   return (
@@ -79,24 +66,25 @@ export default function Hero() {
       overflow="hidden"
       bg="background.primary"
     >
-      {/* Single Background Image */}
+      {/* Background Image */}
       <Box
         position="absolute"
         top={0}
         left={0}
         w="100%"
         h="100%"
-        opacity={isTransitioning ? 0 : 1}
-        transition="opacity 2s ease-in-out"
         zIndex={1}
       >
         <Image
+          key={currentImageIndex} // Force re-render for each image
           src={studioImages[currentImageIndex]}
           alt={`Studio image ${currentImageIndex + 1}`}
           fill
           style={{
             objectFit: 'cover',
             objectPosition: 'center',
+            transform: imageZoom ? 'scale(1.1)' : 'scale(1)',
+            transition: 'transform 8s ease-out',
           }}
           priority={currentImageIndex === 0}
           sizes="100vw"
