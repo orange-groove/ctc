@@ -26,11 +26,9 @@ const studioImages = [
 export default function Hero() {
   const content = getContent()
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [nextImageIndex, setNextImageIndex] = useState(1)
   const [isLoaded, setIsLoaded] = useState(false)
   const [isTransitioning, setIsTransitioning] = useState(false)
-  const [currentImageLoaded, setCurrentImageLoaded] = useState(false)
-  const [nextImageLoaded, setNextImageLoaded] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false)
 
   useEffect(() => {
     // Trigger logo animation after component mounts
@@ -38,32 +36,38 @@ export default function Hero() {
       setIsLoaded(true)
     }, 100)
 
+    // Preload next image
+    const preloadNextImage = () => {
+      const nextIndex = (currentImageIndex + 1) % studioImages.length
+      const img = new window.Image()
+      img.src = studioImages[nextIndex]
+    }
+
     // Image transition timer
     const imageTimer = setInterval(() => {
       setIsTransitioning(true)
+      setImageLoaded(false)
+      
+      // Preload next image before transition
+      preloadNextImage()
       
       // Wait for longer fade duration, then change image
       setTimeout(() => {
-        setCurrentImageIndex(nextImageIndex)
-        setNextImageIndex((nextImageIndex + 1) % studioImages.length)
+        setCurrentImageIndex((prevIndex) => 
+          prevIndex === studioImages.length - 1 ? 0 : prevIndex + 1
+        )
         setIsTransitioning(false)
-        setCurrentImageLoaded(nextImageLoaded)
-        setNextImageLoaded(false)
       }, 2000) // 2 second fade duration
-    }, 6000) // Change image every 6 seconds (increased from 5)
+    }, 6000) // Change image every 6 seconds
 
     return () => {
       clearTimeout(logoTimer)
       clearInterval(imageTimer)
     }
-  }, [nextImageIndex, nextImageLoaded])
+  }, [currentImageIndex])
 
-  const handleCurrentImageLoad = () => {
-    setCurrentImageLoaded(true)
-  }
-
-  const handleNextImageLoad = () => {
-    setNextImageLoaded(true)
+  const handleImageLoad = () => {
+    setImageLoaded(true)
   }
 
   return (
@@ -74,7 +78,7 @@ export default function Hero() {
       overflow="hidden"
       bg="background.primary"
     >
-      {/* Current Background Image */}
+      {/* Single Background Image */}
       <Box
         position="absolute"
         top={0}
@@ -95,31 +99,7 @@ export default function Hero() {
           }}
           priority={currentImageIndex === 0}
           sizes="100vw"
-          onLoad={handleCurrentImageLoad}
-        />
-      </Box>
-
-      {/* Preloaded Next Background Image */}
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        w="100%"
-        h="100%"
-        opacity={0}
-        zIndex={0}
-        pointerEvents="none"
-      >
-        <Image
-          src={studioImages[nextImageIndex]}
-          alt={`Studio image ${nextImageIndex + 1}`}
-          fill
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center',
-          }}
-          sizes="100vw"
-          onLoad={handleNextImageLoad}
+          onLoad={handleImageLoad}
         />
       </Box>
 
