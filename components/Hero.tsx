@@ -60,31 +60,29 @@ export default function Hero() {
       overflow="hidden"
       bg="background.primary"
     >
-      {/* Background Images */}
-      {studioImages.map((image, index) => (
-        <Box
-          key={image}
-          position="absolute"
-          top={0}
-          left={0}
-          w="100%"
-          h="100%"
-          opacity={index === currentImageIndex ? (isTransitioning ? 0 : 1) : 0}
-          transition="opacity 1s ease-in-out"
-          zIndex={1}
-        >
-          <Image
-            src={image}
-            alt={`Studio image ${index + 1}`}
-            fill
-            style={{
-              objectFit: 'cover',
-              objectPosition: 'center',
-            }}
-            priority={index === 0}
-          />
-        </Box>
-      ))}
+      {/* Single Background Image */}
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        w="100%"
+        h="100%"
+        opacity={isTransitioning ? 0 : 1}
+        transition="opacity 1s ease-in-out"
+        zIndex={1}
+      >
+        <Image
+          src={studioImages[currentImageIndex]}
+          alt={`Studio image ${currentImageIndex + 1}`}
+          fill
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+          priority={currentImageIndex === 0}
+          sizes="100vw"
+        />
+      </Box>
 
       {/* Black Overlay */}
       <Box
