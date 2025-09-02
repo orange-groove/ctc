@@ -28,31 +28,27 @@
   "testimonials": [
     {
       "id": 1,
-      "clientName": "Maple Ridge Estates",
+      "clientName": "Benjamin Sanders",
       "rating": 5,
-      "text": "Cole Tree Service did an outstanding job removing the storm-damaged trees from our community. Professional, safe, and left the property spotless!",
-      "type": "Residential Community"
+      "text": "Cole Tree Care is absolutely the company you want to hire for any of your tree care and stump grinding needs. These guys positively crushed the job and transformed my yard quickly. In additional to clearing and grinding the rhizomes of this invasive bamboo, they ground down an additional 11 shrubs and tree stumps for us. They went above and beyond to clean up my yard as if it were their own. What a makeover. Don’t just go with the first results on google when you’re looking for tree care and stump grinding in the Richmond Hill area, Cole Tree Care is the company you want to call."
     },
     {
       "id": 2,
-      "clientName": "Downtown Business District",
+      "clientName": "Abby Peszeki",
       "rating": 5,
-      "text": "The team at Cole Tree Service was incredibly professional and efficient. They completed our large-scale tree removal project on time and within budget.",
-      "type": "Commercial Property"
+        "text": "Amazing work and quick! They showed up during a rain storm, waited it out and took out the trees, and then came out the next day to finish the job on a windy day. They were very careful to avoid damaging anything while taking down large trees, and hauled everything away. Will refer all friends to this company. Affordable and quick, thank you so much!", "type": "Commercial Property"
     },
     {
       "id": 3,
-      "clientName": "Riverside Park",
+      "clientName": "Heather Dolinar",
       "rating": 5,
-      "text": "Cole Tree Service handled our emergency tree removal with expertise and care. They worked around our park visitors and completed the job safely.",
-      "type": "Municipal Property"
+      "text": "I saw Josh came highly recommended on Facebook so gave him a call. He was quick to respond, had a competitive rate, and far exceeded our expectations. He even cleaned up a few other areas of the property that weren't on his list. He cleaned up everything including debris left by another company months ago. We will most definitely use him for future jobs. Thank you for your professionalism!"
     },
     {
       "id": 4,
-      "clientName": "Oakwood Subdivision",
+      "clientName": "Jesica Holder",
       "rating": 5,
-      "text": "Outstanding service from start to finish. They removed multiple large trees efficiently and safely, with minimal disruption to our neighborhood.",
-      "type": "Residential Development"
+      "text": "Hands down the best tree service company in town. The owner Josh is a great guy. Very communicative, friendly, goes above and beyond for us and offers the best quality work."
     }
   ],
   "services": [
