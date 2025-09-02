@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'Fire Wave <noreply@firewave912.com>',
+      from: 'Cole Tree Service <noreply@coletreeservice.com>',
       to: [process.env.CONTACT_EMAIL || 'your-email@example.com'],
       subject: `New Contact Form Submission from ${name}`,
       html: `
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
             </p>
           </div>
           <p style="color: #666; font-size: 12px;">
-            This message was sent from the Fire Wave contact form.
+            This message was sent from the Cole Tree Service contact form.
           </p>
         </div>
       `,

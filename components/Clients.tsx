@@ -21,7 +21,7 @@ export default function Clients() {
             Featured Clients
           </Heading>
           <Text fontSize="lg" color="text.secondary" maxW="3xl" textAlign="center">
-            We&apos;ve had the privilege of working with amazing artists and bands across various genres
+            We&apos;ve had the privilege of serving residential, commercial, and municipal clients throughout the region
           </Text>
           <SimpleGrid columns={{ base: 2, md: 4 }} spacing={8} w="full">
             {content.clients.map((client) => (
@@ -30,7 +30,7 @@ export default function Clients() {
                   <Text color="text.secondary" fontSize="lg" fontWeight="bold">{client.name}</Text>
                 </Box>
                 <Text fontSize="sm" color="text.secondary" textAlign="center">
-                  {client.genre}
+                  {client.type}
                 </Text>
               </VStack>
             ))}

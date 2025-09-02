@@ -1,31 +1,31 @@
 import { extendTheme } from '@chakra-ui/react'
 
 const colors = {
-  // Primary brand colors - Fire Orange theme
+  // Primary brand colors - Red theme for Cole Tree Care
   brand: {
-    50: '#fff7ed',
-    100: '#ffedd5',
-    200: '#fed7aa',
-    300: '#fdba74',
-    400: '#fb923c',
-    500: '#f97316', // Bright fire orange
-    600: '#ea580c',
-    700: '#c2410c',
-    800: '#9a3412',
-    900: '#7c2d12',
+    50: '#fef2f2',
+    100: '#fee2e2',
+    200: '#fecaca',
+    300: '#fca5a5',
+    400: '#f87171',
+    500: '#ff0000', // Pure red
+    600: '#dc2626',
+    700: '#b91c1c',
+    800: '#991b1b',
+    900: '#7f1d1d',
   },
 
   background: {
-    primary: '#000000',
-    secondary: '#050512',
+    primary: '#ffffff',
+    secondary: '#f8f9fa',
   },
   
   // Text colors
   text: {
-    primary: '#ededed',    // Main text
-    secondary: '#b8b8b8',  // Secondary text
-    muted: '#8a8a8a',      // Muted text
-    inverse: '#050512',    // Text on light backgrounds
+    primary: '#1a202c',    // Main text - dark for white background
+    secondary: '#4a5568',  // Secondary text
+    muted: '#718096',      // Muted text
+    inverse: '#ffffff',    // Text on dark backgrounds
   },
   
   // Semantic colors
@@ -70,16 +70,16 @@ const colors = {
   
   // Border colors
   border: {
-    light: '#374151',
-    medium: '#4b5563',
-    dark: '#6b7280',
+    light: '#e2e8f0',
+    medium: '#cbd5e0',
+    dark: '#a0aec0',
   },
   
   // Form colors
   form: {
     bg: 'background.secondary',
     border: 'border.medium',
-    placeholder: '#a0a0a0',
+    placeholder: '#718096',
   }
 }
 

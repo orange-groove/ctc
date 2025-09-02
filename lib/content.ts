@@ -3,7 +3,7 @@ import contentData from '../data/content.json'
 export interface Client {
   id: number
   name: string
-  genre: string
+  type: string
   image: string
 }
 
@@ -12,7 +12,7 @@ export interface Testimonial {
   clientName: string
   rating: number
   text: string
-  genre: string
+  type: string
 }
 
 export interface Service {
@@ -22,7 +22,7 @@ export interface Service {
   icon: string
 }
 
-export interface GearCategory {
+export interface Equipment {
   id: number
   category: string
   items: string[]
@@ -47,7 +47,7 @@ export interface ContentData {
   clients: Client[]
   testimonials: Testimonial[]
   services: Service[]
-  gear: GearCategory[]
+  equipment: Equipment[]
   about: About
   hero: Hero
   contact: Contact
@@ -69,8 +69,8 @@ export function getServices(): Service[] {
   return contentData.services
 }
 
-export function getGear(): GearCategory[] {
-  return contentData.gear
+export function getEquipment(): Equipment[] {
+  return contentData.equipment
 }
 
 export function getAbout(): About {

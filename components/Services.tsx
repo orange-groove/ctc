@@ -9,13 +9,13 @@ import {
   SimpleGrid,
   Icon,
 } from '@chakra-ui/react'
-import { FaMicrophone, FaMusic, FaHeadphones } from 'react-icons/fa'
+import { FaTree, FaExclamationTriangle, FaCog } from 'react-icons/fa'
 import { getContent } from '../lib/content'
 
 const iconMap = {
-  FaMicrophone,
-  FaMusic,
-  FaHeadphones,
+  FaTree,
+  FaExclamationTriangle,
+  FaCog,
 }
 
 export default function Services() {

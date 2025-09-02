@@ -16,12 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fire Wave Studios",
-  description: "Fire Wave Studios is a recording studio in Richmond Hill, GA. We offer a range of services from recording to mixing and mastering.",
+  title: "Cole Tree Service",
+  description: "Cole Tree Service is a professional tree removal company offering tree removal, emergency tree services, and stump grinding throughout the region.",
   icons: {
-    icon: '/logo.webp',
-    shortcut: '/logo.webp',
-    apple: '/logo.webp',
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 };
 

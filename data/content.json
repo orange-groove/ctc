@@ -2,124 +2,127 @@
   "clients": [
     {
       "id": 1,
-      "name": "The Midnight Echoes",
-      "genre": "Alternative Rock",
-      "image": "/clients/midnight-echoes.jpg"
+      "name": "Maple Ridge Estates",
+      "type": "Residential Community",
+      "image": "/clients/maple-ridge.jpg"
     },
     {
       "id": 2,
-      "name": "Sarah Chen",
-      "genre": "Singer-Songwriter",
-      "image": "/clients/sarah-chen.jpg"
+      "name": "Downtown Business District",
+      "type": "Commercial Property",
+      "image": "/clients/downtown-business.jpg"
     },
     {
       "id": 3,
-      "name": "Urban Beats",
-      "genre": "Hip-Hop/R&B",
-      "image": "/clients/urban-beats.jpg"
+      "name": "Riverside Park",
+      "type": "Municipal Property",
+      "image": "/clients/riverside-park.jpg"
     },
     {
       "id": 4,
-      "name": "Crystal Clear",
-      "genre": "Pop/Electronic",
-      "image": "/clients/crystal-clear.jpg"
+      "name": "Oakwood Subdivision",
+      "type": "Residential Development",
+      "image": "/clients/oakwood-subdivision.jpg"
     }
   ],
   "testimonials": [
     {
       "id": 1,
-      "clientName": "The Midnight Echoes",
+      "clientName": "Maple Ridge Estates",
       "rating": 5,
-      "text": "Fire Wave transformed our sound completely. The mixing and mastering brought out the best in our music. Highly recommended!",
-      "genre": "Alternative Rock"
+      "text": "Cole Tree Service did an outstanding job removing the storm-damaged trees from our community. Professional, safe, and left the property spotless!",
+      "type": "Residential Community"
     },
     {
       "id": 2,
-      "clientName": "Sarah Chen",
+      "clientName": "Downtown Business District",
       "rating": 5,
-      "text": "Professional, creative, and incredibly talented. They understood our vision and delivered beyond our expectations.",
-      "genre": "Singer-Songwriter"
+      "text": "The team at Cole Tree Service was incredibly professional and efficient. They completed our large-scale tree removal project on time and within budget.",
+      "type": "Commercial Property"
     },
     {
       "id": 3,
-      "clientName": "Urban Beats",
+      "clientName": "Riverside Park",
       "rating": 5,
-      "text": "The team at Fire Wave really knows their stuff. They took our raw tracks and turned them into something amazing. The attention to detail is incredible.",
-      "genre": "Hip-Hop/R&B"
+      "text": "Cole Tree Service handled our emergency tree removal with expertise and care. They worked around our park visitors and completed the job safely.",
+      "type": "Municipal Property"
     },
     {
       "id": 4,
-      "clientName": "Crystal Clear",
+      "clientName": "Oakwood Subdivision",
       "rating": 5,
-      "text": "Working with Fire Wave was a game-changer for our EP. The mastering quality is outstanding and the communication throughout the process was excellent.",
-      "genre": "Pop/Electronic"
+      "text": "Outstanding service from start to finish. They removed multiple large trees efficiently and safely, with minimal disruption to our neighborhood.",
+      "type": "Residential Development"
     }
   ],
   "services": [
     {
       "id": 1,
-      "title": "Audio Recording",
-      "description": "Professional recording sessions in our acoustically treated studio. We capture the perfect take with premium microphones and equipment.",
-      "icon": "FaMicrophone"
+      "title": "Tree Removal",
+      "description": "Professional tree removal services for trees of all sizes. We handle everything from small ornamental trees to large, hazardous trees safely and efficiently.",
+      "icon": "FaTree"
     },
     {
       "id": 2,
-      "title": "Mixing",
-      "description": "Expert mixing services to balance and enhance your tracks. We bring clarity and depth to your music with precision and creativity.",
-      "icon": "FaMusic"
+      "title": "Emergency Tree Services",
+      "description": "24/7 emergency response for storm-damaged trees, fallen limbs, and hazardous tree situations. Fast, safe, and reliable when you need us most.",
+      "icon": "FaExclamationTriangle"
     },
     {
       "id": 3,
-      "title": "Mastering",
-      "description": "Final polish and optimization for release. We ensure your music sounds great on all platforms and devices.",
-      "icon": "FaHeadphones"
+      "title": "Stump Grinding",
+      "description": "Complete stump removal and grinding services. We eliminate unsightly stumps and prepare your property for new landscaping or construction.",
+      "icon": "FaCog"
     }
   ],
-  "gear": [
+  "equipment": [
     {
       "id": 1,
-      "category": "Mixers & Interfaces",
+      "category": "Tree Removal Equipment",
       "items": [
-        "StudioLive 24 Series III Mixer",
-        "StudioLive 16.0.2 USB"
+        "Professional Chainsaws",
+        "Crane Services",
+        "Bucket Trucks"
       ]
     },
     {
       "id": 2,
-      "category": "Microphones",
+      "category": "Safety Equipment",
       "items": [
-        "WA U-86 Condenser Mic",
-        "Audix Drum Mic Set",
-        "Shure SM-57 Dynamic Mics"
+        "Climbing Gear",
+        "Safety Harnesses",
+        "Protective Equipment"
       ]
     },
     {
       "id": 3,
-      "category": "Computing",
+      "category": "Cleanup Equipment",
       "items": [
-        "Mac Mini Workstations"
+        "Wood Chippers",
+        "Stump Grinders",
+        "Cleanup Trucks"
       ]
     },
     {
       "id": 4,
-      "category": "Drums & Percussion",
+      "category": "Specialized Tools",
       "items": [
-        "Sonor House Kit",
-        "Gretsch House Kit",
-        "Roland V-Drums"
+        "Rope Systems",
+        "Rigging Equipment",
+        "Survey Tools"
       ]
     }
   ],
   "about": {
-    "title": "About Us",
-    "description": "At Fire Wave Studios, we offer an exceptional recording experience, expertly guided by our seasoned team of engineers. We handle the technical complexities, allowing you to focus purely on your performance. Beyond their expertise, our engineers embrace a collaborative approach, actively involving you in the decision-making process and encouraging you to share your unique vision throughout every session. Your artistic input is paramount; we believe the final product must authentically resonate with your original intent. Our mission is to bring your vision to life, ensuring your sound ignites the speakers and captivates your audience. As lifelong musicians ourselves, we deeply understand the importance and preciousness of studio time for both bands and individual artists. We prioritize your time and cultivate a welcoming, pressure-free environment where creativity flourishes, enabling you to craft exceptional sound. We consider it a personal honor to be entrusted with each project, dedicated to helping you elevate your passion and realize your full artistic potential."
+    "title": "About Cole Tree Care",
+    "description": "At Cole Tree Care, we are your trusted partner for all tree removal and emergency tree services. With over 15 years of experience in the industry, our certified arborists and skilled crew members are committed to providing safe, efficient, and professional tree care services. We understand that tree removal can be a complex and potentially dangerous task, which is why we prioritize safety above all else. Our team is fully insured, bonded, and equipped with state-of-the-art equipment to handle any tree removal challenge. Whether you need routine tree removal, emergency storm damage response, or stump grinding services, we approach every project with the same level of professionalism and attention to detail. We take pride in leaving your property cleaner than we found it, and our commitment to customer satisfaction has made us the preferred choice for residential, commercial, and municipal clients throughout the region. When you choose Cole Tree Care, you're choosing a team that values your safety, your property, and your peace of mind."
   },
   "hero": {
-    "title": "Fire Wave",
-    "subtitle": "Professional audio recording, mixing, and mastering services"
+    "title": "Cole Tree Care",
+    "subtitle": "Professional tree removal and emergency tree services"
   },
   "contact": {
     "title": "Get In Touch",
-    "description": "Ready to start your next project? Get in touch with us today."
+    "description": "Need tree removal services? Contact us today for a free estimate."
   }
 } 

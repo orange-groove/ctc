@@ -64,8 +64,8 @@ export default function Nav() {
               transition="opacity 0.2s"
             >
               <Image
-                src="/logo.webp"
-                alt="Fire Wave logo"
+                src="/favicon.png"
+                alt="Cole Tree Service logo"
                 width={48}
                 height={48}
                 priority
@@ -76,9 +76,8 @@ export default function Nav() {
               <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
                 <NavLink href="#about">About</NavLink>
                 <NavLink href="#services">Services</NavLink>
-                {/* <NavLink href="#gear">Gear</NavLink> */}
-                {/* <NavLink href="#clients">Clients</NavLink>
-                <NavLink href="#testimonials">Testimonials</NavLink> */}
+                <NavLink href="#clients">Clients</NavLink>
+                <NavLink href="#testimonials">Testimonials</NavLink>
                 <NavLink href="#contact">Contact</NavLink>
               </HStack>
             )}
@@ -122,9 +121,8 @@ export default function Nav() {
             <Stack as={'nav'} spacing={4}>
               <NavLink href="#about">About</NavLink>
               <NavLink href="#services">Services</NavLink>
-              {/* <NavLink href="#gear">Gear</NavLink> */}
-              {/* <NavLink href="#clients">Clients</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink> */}
+              <NavLink href="#clients">Clients</NavLink>
+              <NavLink href="#testimonials">Testimonials</NavLink>
               <NavLink href="#contact">Contact</NavLink>
             </Stack>
           </Box>
