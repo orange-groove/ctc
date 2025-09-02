@@ -9,12 +9,12 @@ import {
   SimpleGrid,
   Icon,
 } from '@chakra-ui/react'
-import { FaTree, FaExclamationTriangle, FaCog } from 'react-icons/fa'
+import { FaTree, FaCut, FaCog } from 'react-icons/fa'
 import { getContent } from '../lib/content'
 
 const iconMap = {
   FaTree,
-  FaExclamationTriangle,
+  FaCut,
   FaCog,
 }
 

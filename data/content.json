@@ -54,19 +54,19 @@
   "services": [
     {
       "id": 1,
-      "title": "Tree Removal",
+      "title": "Removals",
       "description": "Professional tree removal services for trees of all sizes. We handle everything from small ornamental trees to large, hazardous trees safely and efficiently.",
       "icon": "FaTree"
     },
     {
       "id": 2,
-      "title": "Emergency Tree Services",
-      "description": "24/7 emergency response for storm-damaged trees, fallen limbs, and hazardous tree situations. Fast, safe, and reliable when you need us most.",
-      "icon": "FaExclamationTriangle"
+      "title": "Trimming",
+      "description": "Expert tree trimming and pruning services to maintain the health and appearance of your trees. We ensure proper growth patterns and remove dead or dangerous branches.",
+      "icon": "FaCut"
     },
     {
       "id": 3,
-      "title": "Stump Grinding",
+      "title": "Stumps",
       "description": "Complete stump removal and grinding services. We eliminate unsightly stumps and prepare your property for new landscaping or construction.",
       "icon": "FaCog"
     }
@@ -115,7 +115,7 @@
   },
   "hero": {
     "title": "Cole Tree Care",
-    "subtitle": "Professional tree removal and emergency tree services"
+    "subtitle": "Richmond Hill's trusted and reliable tree professionals"
   },
   "contact": {
     "title": "Get In Touch",
