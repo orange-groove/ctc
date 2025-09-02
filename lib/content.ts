@@ -12,7 +12,6 @@ export interface Testimonial {
   clientName: string
   rating: number
   text: string
-  type: string
 }
 
 export interface Service {
