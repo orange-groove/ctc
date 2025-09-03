@@ -16,16 +16,16 @@ const colors = {
   },
 
   background: {
-    primary: '#ffffff',
-    secondary: '#f8f9fa',
+    primary: '#0f0f0f',
+    secondary: '#1a1a1a',
   },
   
   // Text colors
   text: {
-    primary: '#1a202c',    // Main text - dark for white background
-    secondary: '#4a5568',  // Secondary text
-    muted: '#718096',      // Muted text
-    inverse: '#ffffff',    // Text on dark backgrounds
+    primary: '#ffffff',    // Main text - white for dark background
+    secondary: '#e2e8f0',  // Secondary text
+    muted: '#a0aec0',      // Muted text
+    inverse: '#0f0f0f',    // Text on light backgrounds
   },
   
   // Semantic colors
@@ -70,9 +70,9 @@ const colors = {
   
   // Border colors
   border: {
-    light: '#e2e8f0',
-    medium: '#cbd5e0',
-    dark: '#a0aec0',
+    light: '#2d3748',
+    medium: '#4a5568',
+    dark: '#718096',
   },
   
   // Form colors

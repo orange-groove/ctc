@@ -3,16 +3,14 @@
 import {
   Box,
   Container,
-  
+  Text,
+  VStack,
 } from '@chakra-ui/react'
 import Image from 'next/image'
-import { useState } from 'react'
 import { getContent } from '../lib/content'
-
 
 export default function Hero() {
   const content = getContent()
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   return (
     <Box 
@@ -20,9 +18,40 @@ export default function Hero() {
       h="100vh" 
       w="100vw" 
       overflow="hidden"
-      bg="background.primary"
+      bg="#ffffff"
     >
-      
+      {/* Background Image */}
+      {/* <Box
+        position="absolute"
+        top={0}
+        left={0}
+        w="100%"
+        h="100%"
+        zIndex={1}
+      >
+        <Image
+          src="/bg.jpg"
+          alt="Tree service background"
+          fill
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center top',
+          }}
+          priority
+          sizes="100vw"
+        />
+      </Box> */}
+
+      {/* Dark Overlay */}
+      {/* <Box
+        position="absolute"
+        top={0}
+        left={0}
+        w="100%"
+        h="100%"
+        bg="rgba(0, 0, 0, 0.4)"
+        zIndex={2}
+      /> */}
 
       {/* Content */}
       <Box
@@ -35,12 +64,10 @@ export default function Hero() {
       >
         <Container maxW="container.xl" display="flex" justifyContent="center" alignItems="center" >
           <Image
-            key={currentImageIndex} // Force re-render for each image
             src={'/logo.svg'}
             alt="Cole Tree Service Logo"
             height={600}
             width={600}
-            priority={currentImageIndex === 0}
           />
         </Container>
       </Box>
